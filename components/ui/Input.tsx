@@ -25,12 +25,13 @@ export default function Input({
   return (
     <View className='relative w-full flex-row'>
         <TextInput
-            className={`w-full border-b border-gray-400 font-geo text-[16px] px-3 py-2.5 ${style} ${isPasswordConfirm? '' : 'border-red-500 text-red-500'}`}
-            placeholder={placeholder}
-            value={value}
-            onChangeText={onChange}
-            secureTextEntry={!show}
-            onBlur={onBlur}
+          autoCapitalize="none"
+          className={`w-full border-b border-gray-400 font-geo text-[16px] px-3 py-2.5 ${style} ${isPasswordConfirm? '' : 'border-red-500 text-red-500'}`}
+          placeholder={placeholder}
+          value={value}
+          onChangeText={onChange}
+          secureTextEntry={!show}
+          onBlur={onBlur}
         />
         <TouchableOpacity onPress={()=>setShow(!show)}>
         {isPassword ?<Ionicons

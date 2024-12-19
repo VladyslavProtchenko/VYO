@@ -4,11 +4,13 @@ import ButtonRounded from '@/components/ui/ButtonRounded';
 import { Link, router } from 'expo-router';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import Input from '@/components/ui/Input';
+import useProfileStore from '@/store/useProfileStore';
 
 
 
 
 export default function SignUp() {
+  const { setValue } = useProfileStore()
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
@@ -32,6 +34,8 @@ export default function SignUp() {
 
   const createAccount = () => {
     if(!pass || pass.length < 8) return setIsPass(false);
+    setValue(name, 'name')
+    setValue(email, 'email')
 
     router.navigate('/preview')
   }

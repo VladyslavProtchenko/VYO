@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.title {
+    @apply font-archivo text-[20px] text-black
+}

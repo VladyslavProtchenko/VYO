@@ -23,21 +23,21 @@ export default function Welcome() {
               title='Continue with Email' 
               icon={(<MaterialIcons name="email" size={24} color="white"/>)}
               type='black'
-              onPress={() => router.push('/login')}
+              onPress={() => router.push('/signup')}
               iconLeft={true}
             />
             <ButtonRounded
               title='Continue with Google' 
               icon={(<FontAwesome6 name="google" size={24} color="black" />)}
               type='white'
-              onPress={() => router.push('/login')}
+              onPress={() => router.push('/signup')}
               iconLeft={true}
             />
             <ButtonRounded
-              title='Continue with Google' 
+              title='Continue with Apple' 
               icon={(<FontAwesome name="apple" size={24} color="black" />)}
               type='white'
-              onPress={() => router.push('/login')}
+              onPress={() => router.push('/signup')}
               iconLeft={true}
             />
             <Link className='text-[16px] font-[500] text-center mb-6' href='/login'><Text className='opacity-60'>Have an account?</Text> <Text className='text-blue-700 underline'>Log in</Text></Link>
